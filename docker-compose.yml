@@ -1,0 +1,31 @@
+version: '3.5'
+
+services:
+  db:
+    container_name: tasks_database
+    image: mysql:8.0.32
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./database/data:/var/lib/mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_TCP_PORT: 3306
+      MYSQL_ROOT_PASSWORD: pwd
+      MYSQL_DATABASE: tasks
+
+  app:
+    container_name: tasks_service
+    image: tasks-service
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    restart: always
+    links:
+      - db
+
