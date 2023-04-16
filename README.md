@@ -46,13 +46,13 @@ $ npm install
 
 Requirements: Docker and docker-compose must be installed on your machine.
 ```bash
-docker-compose up--build
+docker-compose up --build
 ```
 This will start on MySQL container and start the application which will be running on port 3000
 
 ### Local Environment
 
-To run the application locally, you must have a MySQL instance installed on your machine and provide the connection parameters in the `database.providers.ts file`
+To run the application locally, you must have a MySQL instance installed on your machine and provide the connection parameters in the `database.providers.ts` file
 
 ```bash
 # development
