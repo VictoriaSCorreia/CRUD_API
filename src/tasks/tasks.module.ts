@@ -5,8 +5,8 @@ import { TasksController } from './tasks.controller';
 import { TasksService } from './tasks.service';
 
 @Module({
-    imports: [DatabaseModule],
-    controllers: [TasksController],
-    providers: [TasksService, ...taskProviders, ]
+  imports: [DatabaseModule],
+  controllers: [TasksController],
+  providers: [TasksService, ...taskProviders],
 })
 export class TasksModule {}
