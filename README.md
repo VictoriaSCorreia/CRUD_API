@@ -20,7 +20,6 @@
 ## CRUD
 
 Task Management API (to-do) :
-
 * Create a new task with the fields : 
 
       1 - title
