@@ -52,7 +52,6 @@ This will start on MySQL container and start the application which will be runni
 ### Local Environment
 
 To run the application locally, you must have a MySQL instance installed on your machine and provide the connection parameters in the `database.providers.ts` file
-
 ```bash
 # development
 $ npm run start
